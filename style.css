@@ -1,9 +1,61 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap');
+
+
 header {
     text-align: center;
   }
+
+  body {
+    font-family: 'Londrina Solid', cursive;
+    color: rgb(65, 62, 62)
+    padding: 0;
+    max-width: 750px;
+     margin: 0 auto;
+}
   
   h1 {
     font-size: 70px;
-    color: #444;
+    color:rgba(0, 0, 255, 0.541);
     margin-bottom: 10px;
+  }
+  ul {
+    list-style: none;
+  }
+  /*
+ * Buttons from:
+ * http://codepen.io/TeshaR/pen/cdugG?editors=110
+ */
+.btn {
+    float: none;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin: 0 7px 11px 0;
+    padding: 0 20px;
+    text-align: center;
+     /* Smoothing out hover using css3 transitions, if not, the pressed button effect looks a bit hard */
+  transition: all 0.2s ease;
+
+  /* Size */
+  line-height: 45px;
+  width: 100%;
+  height: 45px;
+  font-size: 120%;
+
+  /* Colors */
+  background: #f7f7f72a;
+  box-shadow: 0 6px rgba(19, 49, 44, 0.2);
+  color: rgb(5, 7, 71);
+}
+
+  /*------ Footer -----*/
+footer {
+    margin: 0 0 30px 0;
+    padding: 5px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
   }
