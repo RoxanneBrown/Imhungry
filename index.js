@@ -4,47 +4,47 @@
    rice: {
      name: 'Rice',
      healthScore: 1,
-     size: 
+    
    },
    pasta: {
      name: 'Pasta',
      healthScore: 1,
-     size: 
+   
    },
    frenchFries: {
     name: 'French fries',
     healthScore: 1,
-    size:
+ 
   },
   fishSticks: {
     name: 'Fish sticks',
     healthScore: 2,
-    size: 
+  
   },
   chicken: {
     name: 'Chicken',
     healthScore: 2,
-    size:
+  
   },
   tofuBurger: {
     name: 'Tofu burger',
-    healthScore 2,
-    size:
+    healthScore: 2,
+ 
   },
   tomatoSauce: {
     name: 'Tomato Sauce',
     healthScore: 3,
-    size:
+ 
   },
   carrots: {
     name: 'Carrots',
     healthScore: 3,
-    size: 
+    
   },
   peas: {
     name: 'Peas',
     healthScore: 3,
-    size: 
+  
   }
  }
 

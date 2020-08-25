@@ -8,7 +8,7 @@ header {
 
   body {
     font-family: 'Londrina Solid', cursive;
-    color: rgb(65, 62, 62)
+    color: rgb(65, 62, 62);
     padding: 0;
     max-width: 750px;
      margin: 0 auto;
@@ -323,8 +323,9 @@ header {
 
   .score {
   display: flex;
-  
-    right: ;
+  justify-content: space-around;
+  align-content: flex-end;
+  text-align: end;
   }
   
   .score h2 {
@@ -360,20 +361,48 @@ header {
   }
 
    /*------ Plate -----*/
-   
+   .food {
+     background-image: 
+     url("images/plate-checkered_tablecloth.jpg");
+     background-position: center;
+     background-size: cover;
+     height:400px;
+   }
+
    .emptyplate {
      display: flex;
-     justify-content: center;
+     justify-content: space-around;
      align-items: center;
-     width: 80%;
+     width: 90%;
      height: auto;
    }
    .pasta {
     position: absolute;
+    bottom: 10px;
+    
+  width: 250px;
+  height: 250px;
+    
+  }
+
+  .frenchFries{
+    position: absolute;
     width: 100px;
     height: 100px;
-    margin: ;
-    z-index: ;
+    
+  }
+  .fishSticks{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    
+  
+  }
+  .chicken{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    
   }
   /*------ Footer -----*/
 footer {
