@@ -15,13 +15,21 @@ header {
 }
   
   h1 {
-    font-size: 70px;
+    font-size: 50px;
     color:rgba(0, 0, 255, 0.541);
     margin-bottom: 10px;
+  }
+  
+  p.description {
+    font-size: 21px;
+    color: #999;
+    margin: 0 0 25px 0;
+    padding: 0 5px;
   }
   ul {
     list-style: none;
   }
+ 
   /*
  * Buttons from:
  * http://codepen.io/TeshaR/pen/cdugG?editors=110
@@ -43,14 +51,330 @@ header {
   line-height: 45px;
   width: 100%;
   height: 45px;
-  font-size: 120%;
+  font-size: 140%;
 
   /* Colors */
   background: #f7f7f72a;
   box-shadow: 0 6px rgba(19, 49, 44, 0.2);
   color: rgb(5, 7, 71);
 }
+.btn:hover {
+    background: #e6e6e6;
+    box-shadow: 0 5px #aaa;
+    color: #888;
+  }
+  
+  /* Imitate a pressed effect for buttons */
+  .btn:active {
+    top: 5px;
+    box-shadow: none;
+  }
 
+  /*------ Header -----*/
+  /*------ Panels -----*/
+  .fridge {
+    position: absolute;
+    top: 100px;
+    z-index: 42;
+    padding: 20px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  /*------ Controls -----*/
+  .controls {
+    left: 0;
+  }
+  .btn-rice {
+    background: #42e810;
+    box-shadow: 0 6px #224e05;
+    color: #fff;
+  }
+  
+  .btn-rice:hover {
+    background: #222ed1;
+    box-shadow: 0 5px #266907;
+    color: #fff;
+  }
+  
+  .btn-rice.active {
+    top: 2px;
+    box-shadow: 0 2px #094b89;
+  }
+  
+  .btn-rice.active:hover {
+    box-shadow: 0 2px #076959;
+  }
+
+  .btn-rice:active,
+  .btn-rice.active:active {
+    top: 5px;
+    box-shadow: none;
+  }
+  .btn-pasta {
+    background: #38c50d;
+    box-shadow: 0 6px #224e05;
+    color: #fff;
+  }
+  
+  .btn-pasta:hover {
+    background: #222ed1;
+    box-shadow: 0 5px #266907;
+    color: #fff;
+  }
+  
+  .btn-pasta.active {
+    top: 2px;
+    box-shadow: 0 2px #094b89;
+  }
+  
+  .btn-pasta.active:hover {
+    box-shadow: 0 2px #076959;
+  }
+
+  .btn-pasta:active,
+  .btn-pasta.active:active {
+    top: 5px;
+    box-shadow: none;
+  }
+  .btn-fries {
+    background: #30ac0b;
+    box-shadow: 0 6px #224e05;
+    color: #fff;
+  }
+  
+  .btn-fries:hover {
+    background: #222ed1;
+    box-shadow: 0 5px #266907;
+    color: #fff;
+  }
+  
+  .btn-fries.active {
+    top: 2px;
+    box-shadow: 0 2px #094b89;
+  }
+  
+  .btn-fries.active:hover {
+    box-shadow: 0 2px #076959;
+  }
+
+  .btn-fries:active,
+  .btn-fries.active:active {
+    top: 5px;
+    box-shadow: none;
+  }
+  .btn-fish {
+    background: #0bac97;
+    box-shadow: 0 6px #224e05;
+    color: #fff;
+  }
+  
+  .btn-fish:hover {
+    background: #222ed1;
+    box-shadow: 0 5px #266907;
+    color: #fff;
+  }
+  
+  .btn-fish.active {
+    top: 2px;
+    box-shadow: 0 2px #094b89;
+  }
+  
+  .btn-fish.active:hover {
+    box-shadow: 0 2px #076959;
+  }
+
+  .btn-fish:active,
+  .btn-fish.active:active {
+    top: 5px;
+    box-shadow: none;
+  }
+  .btn-chicken {
+    background: #099683;
+    box-shadow: 0 6px #224e05;
+    color: #fff;
+  }
+  
+  .btn-chicken:hover {
+    background: #222ed1;
+    box-shadow: 0 5px #266907;
+    color: #fff;
+  }
+  
+  .btn-chicken.active {
+    top: 2px;
+    box-shadow: 0 2px #094b89;
+  }
+  
+  .btn-chicken.active:hover {
+    box-shadow: 0 2px #076959;
+  }
+
+  .btn-chicken:active,
+  .btn-fish.active:active {
+    top: 5px;
+    box-shadow: none;
+  }
+  .btn-tofu {
+    background: #077e6e;
+    box-shadow: 0 6px #224e05;
+    color: #fff;
+  }
+  
+  .btn-tofu:hover {
+    background: #222ed1;
+    box-shadow: 0 5px #266907;
+    color: #fff;
+  }
+  
+  .btn-tofu.active {
+    top: 2px;
+    box-shadow: 0 2px #094b89;
+  }
+  
+  .btn-tofu.active:hover {
+    box-shadow: 0 2px #076959;
+  }
+
+  .btn-tofu:active,
+  .btn-fish.active:active {
+    top: 5px;
+    box-shadow: none;
+  }
+  .btn-sauce {
+    background: #0b6ad6;
+    box-shadow: 0 6px #224e05;
+    color: #fff;
+  }
+  
+  .btn-sauce:hover {
+    background: #222ed1;
+    box-shadow: 0 5px #266907;
+    color: #fff;
+  }
+  
+  .btn-sauce.active {
+    top: 2px;
+    box-shadow: 0 2px #094b89;
+  }
+  
+  .btn-sauce.active:hover {
+    box-shadow: 0 2px #076959;
+  }
+
+  .btn-sauce:active,
+  .btn-fish.active:active {
+    top: 5px;
+    box-shadow: none;
+  }
+  .btn-peas {
+    background: #0859b6;
+    box-shadow: 0 6px #224e05;
+    color: #fff;
+  }
+  
+  .btn-peas:hover {
+    background: #222ed1;
+    box-shadow: 0 5px #266907;
+    color: #fff;
+  }
+  
+  .btn-peas.active {
+    top: 2px;
+    box-shadow: 0 2px #094b89;
+  }
+  
+  .btn-peas.active:hover {
+    box-shadow: 0 2px #076959;
+  }
+
+  .btn-peas:active,
+  .btn-fish.active:active {
+    top: 5px;
+    box-shadow: none;
+  }
+  .btn-carrots {
+    background: #064c9c;
+    box-shadow: 0 6px #224e05;
+    color: #fff;
+  }
+  
+  .btn-carrots:hover {
+    background: #070c49;
+    box-shadow: 0 5px #266907;
+    color: #fff;
+  }
+  
+  .btn-carrots.active {
+    top: 2px;
+    box-shadow: 0 2px #094b89;
+  }
+  
+  .btn-carrots.active:hover {
+    box-shadow: 0 2px #076959;
+  }
+
+  .btn-carrots:active,
+  .btn-fish.active:active {
+    top: 5px;
+    box-shadow: none;
+  }
+
+  /*------ Score -----*/
+
+  .score {
+  display: flex;
+  
+    right: ;
+  }
+  
+  .score h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .score h2:after {
+    content: ':';
+  }
+  
+  .score b {
+    font-size: 25px;
+    color: #e2311a;
+  }
+  
+  /* .score li {
+    margin: 5px 20px 0;
+    color: #666;
+  }
+  
+  .score li:before {
+    content: '+ ';
+    color: #e2311a;
+  }
+   */
+  .score strong {
+    font-size: 30px;
+    display: block;
+    margin-top: 6px;
+  }
+
+   /*------ Plate -----*/
+   
+   .emptyplate {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 80%;
+     height: auto;
+   }
+   .pasta {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin: ;
+    z-index: ;
+  }
   /*------ Footer -----*/
 footer {
     margin: 0 0 30px 0;
@@ -58,4 +382,5 @@ footer {
     font-size: 12px;
     line-height: 16px;
     text-align: center;
+    display: block;
   }

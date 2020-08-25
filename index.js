@@ -61,7 +61,7 @@
     peas: false,
   }
 
-  // This function takes care of rendering the pizza based on the state
+  // This function takes care of rendering the plate based on the state
  // This function is triggered once at the beginning and every time the state is changed
  function renderEverything() {
     renderRice();
@@ -78,3 +78,12 @@
     renderScore();
   }
  
+  function renderPasta() {
+    document.querySelector('.pasta').forEach(showPasta => {
+      if (state.pasta) {
+        showPasta.style.visibility = 'hiden';
+      } else {
+        showPasta.style.visibility = 'visible';
+      }
+    });
+  }
