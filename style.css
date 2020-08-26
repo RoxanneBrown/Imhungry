@@ -1,50 +1,48 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap");
 
 header {
-    text-align: center;
-  }
-
-  body {
-    font-family: 'Londrina Solid', cursive;
-    color: rgb(65, 62, 62);
-    padding: 0;
-    max-width: 750px;
-     margin: 0 auto;
+  text-align: center;
 }
-  
-  h1 {
-    font-size: 50px;
-    color:rgba(0, 0, 255, 0.541);
-    margin-bottom: 10px;
-  }
-  
-  p.description {
-    font-size: 21px;
-    color: #999;
-    margin: 0 0 25px 0;
-    padding: 0 5px;
-  }
-  ul {
-    list-style: none;
-  }
- 
-  /*
+
+body {
+  font-family: "Londrina Solid", cursive;
+  color: rgb(65, 62, 62);
+  padding: 0;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 50px;
+  color: rgba(0, 0, 255, 0.541);
+  margin-bottom: 10px;
+}
+
+p.description {
+  font-size: 21px;
+  color: #999;
+  margin: 0 0 25px 0;
+  padding: 0 5px;
+}
+ul {
+  list-style: none;
+}
+
+/*
  * Buttons from:
  * http://codepen.io/TeshaR/pen/cdugG?editors=110
  */
 .btn {
-    float: none;
-    position: relative;
-    top: 0;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    margin: 0 7px 11px 0;
-    padding: 0 20px;
-    text-align: center;
-     /* Smoothing out hover using css3 transitions, if not, the pressed button effect looks a bit hard */
+  float: none;
+  position: relative;
+  top: 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin: 0 7px 11px 0;
+  padding: 0 20px;
+  text-align: center;
+  /* Smoothing out hover using css3 transitions, if not, the pressed button effect looks a bit hard */
   transition: all 0.2s ease;
 
   /* Size */
@@ -59,292 +57,297 @@ header {
   color: rgb(5, 7, 71);
 }
 .btn:hover {
-    background: #e6e6e6;
-    box-shadow: 0 5px #aaa;
-    color: #888;
-  }
-  
-  /* Imitate a pressed effect for buttons */
-  .btn:active {
-    top: 5px;
-    box-shadow: none;
-  }
+  background: #e6e6e6;
+  box-shadow: 0 5px #aaa;
+  color: #888;
+}
 
-  /*------ Header -----*/
-  /*------ Panels -----*/
-  .fridge {
-    position: absolute;
-    top: 100px;
-    z-index: 42;
-    padding: 20px;
-    border-radius: 3px;
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-  /*------ Controls -----*/
-  .controls {
-    left: 0;
-  }
-  .btn-rice {
-    background: #42e810;
-    box-shadow: 0 6px #224e05;
-    color: #fff;
-  }
-  
-  .btn-rice:hover {
-    background: #222ed1;
-    box-shadow: 0 5px #266907;
-    color: #fff;
-  }
-  
-  .btn-rice.active {
-    top: 2px;
-    box-shadow: 0 2px #094b89;
-  }
-  
-  .btn-rice.active:hover {
-    box-shadow: 0 2px #076959;
-  }
+/* Imitate a pressed effect for buttons */
+.btn:active {
+  top: 5px;
+  box-shadow: none;
+}
 
-  .btn-rice:active,
-  .btn-rice.active:active {
-    top: 5px;
-    box-shadow: none;
-  }
-  .btn-pasta {
-    background: #38c50d;
-    box-shadow: 0 6px #224e05;
-    color: #fff;
-  }
-  
-  .btn-pasta:hover {
-    background: #222ed1;
-    box-shadow: 0 5px #266907;
-    color: #fff;
-  }
-  
-  .btn-pasta.active {
-    top: 2px;
-    box-shadow: 0 2px #094b89;
-  }
-  
-  .btn-pasta.active:hover {
-    box-shadow: 0 2px #076959;
-  }
+/*------ Header -----*/
+/*------ Panels -----*/
+.fridge {
+  position: absolute;
+  top: 100px;
+  padding: 20px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+/*------ Controls -----*/
+.controls {
+  display: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+.btn-rice {
+  background: #f3dc0f;
+  box-shadow: 0 6px #224e05;
+  color: #fff;
+}
 
-  .btn-pasta:active,
-  .btn-pasta.active:active {
-    top: 5px;
-    box-shadow: none;
-  }
-  .btn-fries {
-    background: #30ac0b;
-    box-shadow: 0 6px #224e05;
-    color: #fff;
-  }
-  
-  .btn-fries:hover {
-    background: #222ed1;
-    box-shadow: 0 5px #266907;
-    color: #fff;
-  }
-  
-  .btn-fries.active {
-    top: 2px;
-    box-shadow: 0 2px #094b89;
-  }
-  
-  .btn-fries.active:hover {
-    box-shadow: 0 2px #076959;
-  }
+.btn-rice:hover {
+  background: #222ed1;
+  box-shadow: 0 5px #266907;
+  color: #fff;
+}
 
-  .btn-fries:active,
-  .btn-fries.active:active {
-    top: 5px;
-    box-shadow: none;
-  }
-  .btn-fish {
-    background: #0bac97;
-    box-shadow: 0 6px #224e05;
-    color: #fff;
-  }
-  
-  .btn-fish:hover {
-    background: #222ed1;
-    box-shadow: 0 5px #266907;
-    color: #fff;
-  }
-  
-  .btn-fish.active {
-    top: 2px;
-    box-shadow: 0 2px #094b89;
-  }
-  
-  .btn-fish.active:hover {
-    box-shadow: 0 2px #076959;
-  }
+.btn-rice.active {
+  top: 2px;
+  box-shadow: 0 2px #094b89;
+}
 
-  .btn-fish:active,
-  .btn-fish.active:active {
-    top: 5px;
-    box-shadow: none;
-  }
-  .btn-chicken {
-    background: #099683;
-    box-shadow: 0 6px #224e05;
-    color: #fff;
-  }
-  
-  .btn-chicken:hover {
-    background: #222ed1;
-    box-shadow: 0 5px #266907;
-    color: #fff;
-  }
-  
-  .btn-chicken.active {
-    top: 2px;
-    box-shadow: 0 2px #094b89;
-  }
-  
-  .btn-chicken.active:hover {
-    box-shadow: 0 2px #076959;
-  }
+.btn-rice.active:hover {
+  box-shadow: 0 2px #076959;
+}
 
-  .btn-chicken:active,
-  .btn-fish.active:active {
-    top: 5px;
-    box-shadow: none;
-  }
-  .btn-tofu {
-    background: #077e6e;
-    box-shadow: 0 6px #224e05;
-    color: #fff;
-  }
-  
-  .btn-tofu:hover {
-    background: #222ed1;
-    box-shadow: 0 5px #266907;
-    color: #fff;
-  }
-  
-  .btn-tofu.active {
-    top: 2px;
-    box-shadow: 0 2px #094b89;
-  }
-  
-  .btn-tofu.active:hover {
-    box-shadow: 0 2px #076959;
-  }
+.btn-rice:active,
+.btn-rice.active:active {
+  top: 5px;
+  box-shadow: none;
+}
+.btn-pasta {
+  background: #e09b07;
+  box-shadow: 0 6px #224e05;
+  color: #fff;
+}
 
-  .btn-tofu:active,
-  .btn-fish.active:active {
-    top: 5px;
-    box-shadow: none;
-  }
-  .btn-sauce {
-    background: #0b6ad6;
-    box-shadow: 0 6px #224e05;
-    color: #fff;
-  }
-  
-  .btn-sauce:hover {
-    background: #222ed1;
-    box-shadow: 0 5px #266907;
-    color: #fff;
-  }
-  
-  .btn-sauce.active {
-    top: 2px;
-    box-shadow: 0 2px #094b89;
-  }
-  
-  .btn-sauce.active:hover {
-    box-shadow: 0 2px #076959;
-  }
+.btn-pasta:hover {
+  background: #222ed1;
+  box-shadow: 0 5px #266907;
+  color: #fff;
+}
 
-  .btn-sauce:active,
-  .btn-fish.active:active {
-    top: 5px;
-    box-shadow: none;
-  }
-  .btn-peas {
-    background: #0859b6;
-    box-shadow: 0 6px #224e05;
-    color: #fff;
-  }
-  
-  .btn-peas:hover {
-    background: #222ed1;
-    box-shadow: 0 5px #266907;
-    color: #fff;
-  }
-  
-  .btn-peas.active {
-    top: 2px;
-    box-shadow: 0 2px #094b89;
-  }
-  
-  .btn-peas.active:hover {
-    box-shadow: 0 2px #076959;
-  }
+.btn-pasta.active {
+  top: 2px;
+  box-shadow: 0 2px #094b89;
+}
 
-  .btn-peas:active,
-  .btn-fish.active:active {
-    top: 5px;
-    box-shadow: none;
-  }
-  .btn-carrots {
-    background: #064c9c;
-    box-shadow: 0 6px #224e05;
-    color: #fff;
-  }
-  
-  .btn-carrots:hover {
-    background: #070c49;
-    box-shadow: 0 5px #266907;
-    color: #fff;
-  }
-  
-  .btn-carrots.active {
-    top: 2px;
-    box-shadow: 0 2px #094b89;
-  }
-  
-  .btn-carrots.active:hover {
-    box-shadow: 0 2px #076959;
-  }
+.btn-pasta.active:hover {
+  box-shadow: 0 2px #076959;
+}
 
-  .btn-carrots:active,
-  .btn-fish.active:active {
-    top: 5px;
-    box-shadow: none;
-  }
+.btn-pasta:active,
+.btn-pasta.active:active {
+  top: 5px;
+  box-shadow: none;
+}
+.btn-fries {
+  background: #b16004e7;
+  box-shadow: 0 6px #224e05;
+  color: #fff;
+}
 
-  /*------ Score -----*/
+.btn-fries:hover {
+  background: #222ed1;
+  box-shadow: 0 5px #266907;
+  color: #fff;
+}
 
-  .score {
-  display: flex;
-  justify-content: space-around;
-  align-content: flex-end;
+.btn-fries.active {
+  top: 2px;
+  box-shadow: 0 2px #094b89;
+}
+
+.btn-fries.active:hover {
+  box-shadow: 0 2px #076959;
+}
+
+.btn-fries:active,
+.btn-fries.active:active {
+  top: 5px;
+  box-shadow: none;
+}
+.btn-fish {
+  background: #e207e2;
+  box-shadow: 0 6px #224e05;
+  color: #fff;
+}
+
+.btn-fish:hover {
+  background: #222ed1;
+  box-shadow: 0 5px #266907;
+  color: #fff;
+}
+
+.btn-fish.active {
+  top: 2px;
+  box-shadow: 0 2px #094b89;
+}
+
+.btn-fish.active:hover {
+  box-shadow: 0 2px #076959;
+}
+
+.btn-fish:active,
+.btn-fish.active:active {
+  top: 5px;
+  box-shadow: none;
+}
+.btn-chicken {
+  background: #a107a7;
+  box-shadow: 0 6px #224e05;
+  color: #fff;
+}
+
+.btn-chicken:hover {
+  background: #222ed1;
+  box-shadow: 0 5px #266907;
+  color: #fff;
+}
+
+.btn-chicken.active {
+  top: 2px;
+  box-shadow: 0 2px #094b89;
+}
+
+.btn-chicken.active:hover {
+  box-shadow: 0 2px #076959;
+}
+
+.btn-chicken:active,
+.btn-chicken.active:active {
+  top: 5px;
+  box-shadow: none;
+}
+.btn-tofu {
+  background: #45034e;
+  box-shadow: 0 6px #224e05;
+  color: #fff;
+}
+
+.btn-tofu:hover {
+  background: #222ed1;
+  box-shadow: 0 5px #266907;
+  color: #fff;
+}
+
+.btn-tofu.active {
+  top: 2px;
+  box-shadow: 0 2px #094b89;
+}
+
+.btn-tofu.active:hover {
+  box-shadow: 0 2px #076959;
+}
+
+.btn-tofu:active,
+.btn-tofu.active:active {
+  top: 5px;
+  box-shadow: none;
+}
+.btn-sauce {
+  background: #1aec07;
+  box-shadow: 0 6px #224e05;
+  color: #fff;
+}
+
+.btn-sauce:hover {
+  background: #222ed1;
+  box-shadow: 0 5px #266907;
+  color: #fff;
+}
+
+.btn-sauce.active {
+  top: 2px;
+  box-shadow: 0 2px #094b89;
+}
+
+.btn-sauce.active:hover {
+  box-shadow: 0 2px #076959;
+}
+
+.btn-sauce:active,
+.btn-sauce.active:active {
+  top: 5px;
+  box-shadow: none;
+}
+.btn-peas {
+  background: #17a005;
+  box-shadow: 0 6px #224e05;
+  color: #fff;
+}
+
+.btn-peas:hover {
+  background: #222ed1;
+  box-shadow: 0 5px #266907;
+  color: #fff;
+}
+
+.btn-peas.active {
+  top: 2px;
+  box-shadow: 0 2px #094b89;
+}
+
+.btn-peas.active:hover {
+  box-shadow: 0 2px #076959;
+}
+
+.btn-peas:active,
+.btn-peas.active:active {
+  top: 5px;
+  box-shadow: none;
+}
+.btn-carrots {
+  background: #216303;
+  box-shadow: 0 6px #224e05;
+  color: #fff;
+}
+
+.btn-carrots:hover {
+  background: #070c49;
+  box-shadow: 0 5px #266907;
+  color: #fff;
+}
+
+.btn-carrots.active {
+  top: 2px;
+  box-shadow: 0 2px #094b89;
+}
+
+.btn-carrots.active:hover {
+  box-shadow: 0 2px #076959;
+}
+
+.btn-carrots:active,
+.btn-carrots.active:active {
+  top: 5px;
+  box-shadow: none;
+}
+
+/*------ Score -----*/
+
+.score {
+  /*display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-end;*/
+  display: absolute;
+  right: 0px;
+  top: 0px;
   text-align: end;
-  }
-  
-  .score h2 {
-    font-size: 30px;
-    font-weight: bold;
-    color: #555;
-    margin-bottom: 15px;
-  }
-  
-  .score h2:after {
-    content: ':';
-  }
-  
-  .score b {
-    font-size: 25px;
-    color: #e2311a;
-  }
-  
-  /* .score li {
+}
+
+.score h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.score h2:after {
+  content: ":";
+}
+
+.score b {
+  font-size: 25px;
+  color: #e2311a;
+}
+
+/* .score li {
     margin: 5px 20px 0;
     color: #666;
   }
@@ -354,62 +357,57 @@ header {
     color: #e2311a;
   }
    */
-  .score strong {
-    font-size: 30px;
-    display: block;
-    margin-top: 6px;
-  }
+.score strong {
+  font-size: 30px;
+  display: block;
+  margin-top: 6px;
+}
 
-   /*------ Plate -----*/
-   .food {
-     background-image: 
-     url("images/plate-checkered_tablecloth.jpg");
-     background-position: center;
-     background-size: cover;
-     height:400px;
-   }
+/*------ Plate -----*/
+.food {
+  background-image: url("images/plate-checkered_tablecloth.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+}
 
-   .emptyplate {
-     display: flex;
-     justify-content: space-around;
-     align-items: center;
-     width: 90%;
-     height: auto;
-   }
-   .pasta {
-    position: absolute;
-    bottom: 10px;
-    
-  width: 250px;
-  height: 250px;
-    
-  }
+.emptyplate {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  height: auto;
+}
+.carb {
+  position: absolute;
+  top: 320px;
+  right: 450px;
+  width: 150px;
+  height: 150px;
+}
 
-  .frenchFries{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    
-  }
-  .fishSticks{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    
-  
-  }
-  .chicken{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    
-  }
-  /*------ Footer -----*/
+.protein {
+  position: absolute;
+  top: 300px;
+  right: 620px;
+  width: 200px;
+  height: 200px;
+}
+
+.veggie {
+  position: absolute;
+  top: 500px;
+  right: 500px;
+  width: 200px;
+  height: 150px;
+}
+
+/*------ Footer -----*/
 footer {
-    margin: 0 0 30px 0;
-    padding: 5px;
-    font-size: 12px;
-    line-height: 16px;
-    text-align: center;
-    display: block;
-  }
+  margin: 0 0 30px 0;
+  padding: 5px;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  display: block;
+}
