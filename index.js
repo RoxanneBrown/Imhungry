@@ -50,9 +50,9 @@
 
  // Initial value of the state (the state values can change over time)
  let state = {
-   carb: "pasta",
-   protein: "chicken",
-   veggie: "carrots",
+   carb: "",
+   protein: "",
+   veggie: "",
  }
 
  // This function takes care of rendering the plate based on the state
@@ -66,41 +66,45 @@
  }
 
 
-
-
-
  function renderCarb() {
    const carb = document.querySelector(".carb")
-   if (state.carb === "rice") {
-     carb.setAttribute("src", "images/rice-2294365_1280.jpg")
-
-     // change the src attribute of the img with class carb to the value images/rice-2294365_1280.jpg
-   } else if (state.carb === "pasta") {
-     carb.setAttribute("src", "images/pasta_tortellini.jpeg")
+   if (state.carb === "") {
+    carb.setAttribute("src", "images/empty_pic.png")
+  } else if (state.carb === "rice") {
+    carb.setAttribute("src", "images/rice_wo.png.png")
+  } 
+   else if (state.carb === "pasta") {
+     carb.setAttribute("src", "images/pasta_tortellini_wo.png")
    } else {
-     carb.setAttribute("src", "images/french_fries_small.jpeg")
+     carb.setAttribute("src", "images/french_fries_wo.png")
    }
  }
+ 
 
  function renderProtein() {
    const protein = document.querySelector(".protein")
-   if (state.protein === "chicken") {
-     protein.setAttribute("src", "images/chicken.jpeg")
+   if (state.protein === "") {
+     protein.setAttribute("src", "images/empty_pic.png")
+   }else if (state.protein === "chicken") {
+      protein.setAttribute("src", "images/chicken_wo.png")
    } else if (state.protein === "fish") {
-     protein.setAttribute("src", "images/fish_stick.jpeg")
+     protein.setAttribute("src", "images/fish_stick_wo.png")
    } else {
-     protein.setAttribute("src", "images/tofu_burger.jpeg")
+     protein.setAttribute("src", "images/tofu_pattie_wo.png")
    }
  }
 
  function renderVeggie() {
    const veggie = document.querySelector(".veggie")
-   if (state.veggie === "sauce") {
-     veggie.setAttribute("src", "images/tomatoes_cut.jpeg")
-   } else if (state.veggie === "peas") {
-     veggie.setAttribute("src", "images/zucchini_grilled.png")
+   if (state.veggie === "") {
+     veggie.setAttribute("src", "images/empty_pic.png")
+   } else if
+   (state.veggie === "sauce") {
+    veggie.setAttribute("src", "images/tomaot_cut_wo.png")
+  } else if (state.veggie === "peas") {
+     veggie.setAttribute("src", "images/zucchini_grilled_wo.png")
    } else {
-     veggie.setAttribute("src", "images/carrots.jpeg")
+     veggie.setAttribute("src", "images/carrots_wo.png")
    }
  }
 
@@ -120,22 +124,21 @@
 
    let totalScore = getTotalScore()
    const spanScore = document.querySelector("#scorespan"); 
+   const spanScoreText = document.querySelector("#scoretext"); 
    if (totalScore <= 252) {
-     spanScore.innerHTML = '<img class="monster" src="images_monster/angrysad_monster.jpeg">'
-     console.log('Uh,this was a bit greasy');
+     spanScore.innerHTML = '<img class="monster" src="images_monster/angrysad_monster.jpeg">';
+     spanScoreText.innerHTML =  'Uh...this was a bit greasy';
    } else if (totalScore <= 300) {
-    spanScore.innerHTML = '<img class="monster" src="images_monster/okeydokey_monster.jpeg">'
-     console.log('I guess my dinner was ok');
-   } else 
-   spanScore.innerHTML = '<img class="monster" src="images_monster/buzzyhappy_monster.jpeg">'
-   console.log('Yay, my vegetarian meal was the best!')
-
-   // create variable for the score
-  
-    
-    
+    spanScore.innerHTML = '<img class="monster" src="images_monster/okeydokey_monster.jpeg">';
+    spanScoreText.innerHTML = 'I guess my dinner was ok';
+   } else {
+    spanScore.innerHTML = '<img class="monster" src="images_monster/buzzyhappy_monster.jpeg">';
+    spanScoreText.innerHTML = 'Yay, my vegetarian meal was the best!';
+   }
+   
+           
  }
-console.log(document.querySelector("#scorespan").innerHTML)
+
 
  document.querySelector(".btn.btn-rice.active").addEventListener('click', function () {
    state.carb = "rice";

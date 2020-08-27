@@ -24,6 +24,7 @@ p.description {
   margin: 0 0 25px 0;
   padding: 0 5px;
 }
+
 ul {
   list-style: none;
 }
@@ -56,6 +57,7 @@ ul {
   box-shadow: 0 6px rgba(19, 49, 44, 0.2);
   color: rgb(5, 7, 71);
 }
+
 .btn:hover {
   background: #e6e6e6;
   box-shadow: 0 5px #aaa;
@@ -77,12 +79,14 @@ ul {
   border-radius: 3px;
   background-color: rgba(255, 255, 255, 0.8);
 }
+
 /*------ Controls -----*/
 .controls {
   display: absolute;
   left: 0px;
   bottom: 0px;
 }
+
 .btn-rice {
   background: #f3dc0f;
   box-shadow: 0 6px #224e05;
@@ -109,6 +113,7 @@ ul {
   top: 5px;
   box-shadow: none;
 }
+
 .btn-pasta {
   background: #e09b07;
   box-shadow: 0 6px #224e05;
@@ -135,6 +140,7 @@ ul {
   top: 5px;
   box-shadow: none;
 }
+
 .btn-fries {
   background: #b16004e7;
   box-shadow: 0 6px #224e05;
@@ -161,6 +167,7 @@ ul {
   top: 5px;
   box-shadow: none;
 }
+
 .btn-fish {
   background: #e207e2;
   box-shadow: 0 6px #224e05;
@@ -187,6 +194,7 @@ ul {
   top: 5px;
   box-shadow: none;
 }
+
 .btn-chicken {
   background: #a107a7;
   box-shadow: 0 6px #224e05;
@@ -213,6 +221,7 @@ ul {
   top: 5px;
   box-shadow: none;
 }
+
 .btn-tofu {
   background: #45034e;
   box-shadow: 0 6px #224e05;
@@ -239,6 +248,7 @@ ul {
   top: 5px;
   box-shadow: none;
 }
+
 .btn-sauce {
   background: #1aec07;
   box-shadow: 0 6px #224e05;
@@ -265,6 +275,7 @@ ul {
   top: 5px;
   box-shadow: none;
 }
+
 .btn-peas {
   background: #17a005;
   box-shadow: 0 6px #224e05;
@@ -291,6 +302,7 @@ ul {
   top: 5px;
   box-shadow: none;
 }
+
 .btn-carrots {
   background: #216303;
   box-shadow: 0 6px #224e05;
@@ -343,8 +355,8 @@ ul {
 }
 
 .score b {
-  font-size: 25px;
-  color: #e2311a;
+  font-size: 45px;
+  color: #33b4d4;
 }
 
 /* .score li {
@@ -378,6 +390,7 @@ ul {
   width: 90%;
   height: auto;
 }
+
 .carb {
   position: absolute;
   top: 320px;
@@ -388,18 +401,27 @@ ul {
 
 .protein {
   position: absolute;
-  top: 300px;
-  right: 620px;
+  top: 320px;
+  right: 600px;
   width: 200px;
   height: 200px;
 }
 
 .veggie {
   position: absolute;
-  top: 500px;
-  right: 550px;
-  width: 250px;
-  height: 150px;
+  top: 480px;
+  right: 480px;
+  width: 300px;
+  height: 230px;
+}
+
+.monster {
+  position: absolute;
+  top: 150px;
+  right: 0px;
+  width: 200px;
+  height: 200px;
+
 }
 
 /*------ Footer -----*/
