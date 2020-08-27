@@ -1,64 +1,55 @@
  // Constants
- let baseState = 10;
+ let baseState = 0;
  let foods = {
    rice: {
      name: 'Rice',
-     healthScore: 3,
+     healthScore: 50,
 
    },
    pasta: {
      name: 'Pasta',
+     healthScore: 10,
+
+   },
+   fries: {
+     name: 'French fries',
      healthScore: 2,
 
    },
-   frenchFries: {
-     name: 'French fries',
-     healthScore: 1,
-
-   },
-   fishSticks: {
+   fish: {
      name: 'Fish sticks',
-     healthScore: 1,
+     healthScore: 10,
 
    },
    chicken: {
      name: 'Chicken',
-     healthScore: 2,
+     healthScore: 50,
 
    },
-   tofuBurger: {
+   tofu: {
      name: 'Tofu burger',
-     healthScore: 3,
+     healthScore: 150,
 
    },
-   tomatoSauce: {
+   sauce: {
      name: 'Tomato Sauce',
-     healthScore: 5,
+     healthScore: 200,
 
    },
    carrots: {
      name: 'Carrots',
-     healthScore: 5,
+     healthScore: 200,
 
    },
    peas: {
      name: 'Peas',
-     healthScore: 5,
+     healthScore: 200,
 
    }
  }
 
  // Initial value of the state (the state values can change over time)
  let state = {
-   //  rice: false,
-   //  pasta: false,
-   //  frenchFries: false,
-   //  fishSticks: false,
-   //  chicken: false,
-   //  tofuBurger: false,
-   //  tomatoSauce: false,
-   //  carrots: false,
-   //  peas: false,
    carb: "pasta",
    protein: "chicken",
    veggie: "carrots",
@@ -67,11 +58,10 @@
  // This function takes care of rendering the plate based on the state
  // This function is triggered once at the beginning and every time the state is changed
  function renderEverything() {
-   //console.log(state.carb);
    renderCarb();
    renderProtein();
    renderVeggie();
-   //renderScore();
+   renderScore();
 
  }
 
@@ -86,7 +76,7 @@
 
      // change the src attribute of the img with class carb to the value images/rice-2294365_1280.jpg
    } else if (state.carb === "pasta") {
-     carb.setAttribute("src", "images/pasta_coooked.jpeg")
+     carb.setAttribute("src", "images/pasta_tortellini.jpeg")
    } else {
      carb.setAttribute("src", "images/french_fries_small.jpeg")
    }
@@ -104,45 +94,49 @@
  }
 
  function renderVeggie() {
-  const veggie = document.querySelector(".veggie")
-  if (state.veggie === "sauce") {
-    veggie.setAttribute("src", "images/tomatoes.jpeg")
-  } else if (state.veggie === "peas") {
-    veggie.setAttribute("src", "images/peas_zucchini.jpeg")
-  } else {
-    veggie.setAttribute("src", "images/carrots.jpeg")
-  }
-}
+   const veggie = document.querySelector(".veggie")
+   if (state.veggie === "sauce") {
+     veggie.setAttribute("src", "images/tomatoes_cut.jpeg")
+   } else if (state.veggie === "peas") {
+     veggie.setAttribute("src", "images/zucchini_grilled.png")
+   } else {
+     veggie.setAttribute("src", "images/carrots.jpeg")
+   }
+ }
 
 
+ function renderScore() {
+   // get the score 
+   //use the score in IF statement with console.log
+   // console.log the span in the div class score
+   function getTotalScore() {
+   
+     let score = 0;
+     for (let category in state) {
+       score += foods[state[category]].healthScore
+     }
+     return score
+   }
 
+   let totalScore = getTotalScore()
+   const spanScore = document.querySelector("#scorespan"); 
+   if (totalScore <= 252) {
+     spanScore.innerHTML = '<img class="monster" src="images_monster/angrysad_monster.jpeg">'
+     console.log('Uh,this was a bit greasy');
+   } else if (totalScore <= 300) {
+    spanScore.innerHTML = '<img class="monster" src="images_monster/okeydokey_monster.jpeg">'
+     console.log('I guess my dinner was ok');
+   } else 
+   spanScore.innerHTML = '<img class="monster" src="images_monster/buzzyhappy_monster.jpeg">'
+   console.log('Yay, my vegetarian meal was the best!')
 
+   // create variable for the score
+  
+    
+    
+ }
+console.log(document.querySelector("#scorespan").innerHTML)
 
- //  function renderFridge() {
- //   //     // Iteration 3: add/remove the class "active" of each `<button class="btn">`
- //   if (state.pasta) {
- //     document.querySelector('.btn.btn-pasta').classList.add('active');
- //   } else {
- //     document.querySelector('.btn.btn-pasta').classList.remove('active');
- //   }
-
- //  function renderScore() {
- //   //     // Iteration 4: change the HTML of `<aside class="panel price">`
- //   let list = '';
- //   let price = basePrice;
- //   for (let ingredient in state) {
- //     //console.log (ingredients);
- //     if (state[ingredient]) {
- //       //         //console.log (state[ingredient]);
- //       list += `<li>$ ${ingredients[ingredient].price} ${ingredients[ingredient].name} </li>`
- //       price += ingredients[ingredient].price
- //       //         //console.log(ingredients[ingredient].price);
- //     }
- //   }
- //   document.querySelector('.panel.price ul').innerHTML = list;
- //   document.querySelector('.panel.price strong').innerText = `$${price}`;
- //   //     //console.log(list);
- // }
  document.querySelector(".btn.btn-rice.active").addEventListener('click', function () {
    state.carb = "rice";
    renderEverything()
